@@ -17,7 +17,12 @@
 
         <div class="list-container">
             <ul>
-                <li v-for="(item, i) in todo" :key="item.text">
+                <li v-for="(item, i) in todo" :key="item.text"  v-if="item.done" class="true">
+                    {{(item.text)}} 
+                    <div class="close" @click="removeItem(i)">X</div> 
+                </li>
+                
+                <li v-for="(item, i) in todo" :key="item.text"  v-if="!item.done" class="false">
                     {{(item.text)}} 
                     <div class="close" @click="removeItem(i)">X</div> 
                 </li>

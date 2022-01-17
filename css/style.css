@@ -26,3 +26,10 @@ button, .close {
     border-radius: 30%;
     border: 1px solid red;
 }
+
+
+
+
+.true {
+    text-decoration: line-through;
+}
